@@ -2,6 +2,8 @@ import {TimeSlot} from "./time-slot";
 
 export class DayModel {
 
+  open: boolean = false;
+
   private readonly _dayName: string;
   private _timeSlots: TimeSlot[] = [];
   private _isOpenFor24hours: boolean = false;
@@ -18,6 +20,10 @@ export class DayModel {
     this._timeSlots.push(timeSlot);
   }
 
+  toggleOpen() {
+    this.open = !this.open;
+  }
+
   get timeSlots(): TimeSlot[] {
     return this._timeSlots;
   }
@@ -32,11 +38,26 @@ export class DayModel {
 
   set isOpenFor24hours(value: boolean) {
     this._isOpenFor24hours = value;
-    this._timeSlots = [];
-    this._timeSlots.push(new TimeSlot("00:00", "00:00"));
+    if (value) {
+      this._timeSlots = [];
+      this._timeSlots.push(new TimeSlot("00:00", "00:00"));
+    } else {
+      this._timeSlots = [];
+    }
   }
 
   createTimeSlot() {
     this._timeSlots.push(new TimeSlot("", ""));
+  }
+
+  getFormattedHours(): string {
+    let hours = "";
+    for (let i = 0; i < this._timeSlots.length; i++) {
+      hours += this._timeSlots[i].getFormattedHours();
+      if (i != this.timeSlots.length - 1) {
+        hours += "   ";
+      }
+    }
+    return hours;
   }
 }

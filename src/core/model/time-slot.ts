@@ -22,4 +22,16 @@ export class TimeSlot {
   set closingHour(value: string) {
     this._closingHour = value;
   }
+
+  hasFormattedHours(): boolean{
+    return this.openingsHour?true:false || this.closingHour?true:false;
+}
+
+  getFormattedHours(): string {
+    if (this.hasFormattedHours()) {
+      return this._openingsHour + " - " + this._closingHour;
+    } else {
+      return"";
+    }
+  }
 }
