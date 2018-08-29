@@ -7,8 +7,32 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-grid *ngFor="let day of days">
+    <ion-row>
+      <ion-row>{{day.dayName}}</ion-row>
+      <ion-row *ngFor="let timeslot of day.timeSlots">
+        <ion-col>
+          <ion-datetime displayFormat="HH mm" placeholder="Openingsuur"
+                        [(ngModel)]="timeslot.openingsHour"></ion-datetime>
+        </ion-col>
+        <ion-col>
+          <p>-</p>
+        </ion-col>
+        <ion-col>
+          <ion-datetime displayFormat="HH mm" placeholder="Sluitingsuur"
+                        [(ngModel)]="timeslot.closingHour"></ion-datetime>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-item>
+          <ion-label>Is 24 uur open</ion-label>
+          <ion-checkbox [(ngModel)]="day.isOpenFor24hours"></ion-checkbox>
+        </ion-item>
+      </ion-row>
+    </ion-row>
+    <ion-row align-items-center>
+      <button ion-button (click)="addHourSlot(day)" [disabled]="day.isOpenFor24hours">Voeg tijden toe</button>
+    </ion-row>
+  </ion-grid>
 </ion-content>
