@@ -12,11 +12,11 @@ export class DayModel {
     this._dayName = dayName;
   }
 
-  deleteSlot(timeSlot: TimeSlot) {
-    this._timeSlots = this._timeSlots.splice(this._timeSlots.indexOf(timeSlot), 1);
+  deleteTimeSlot(timeSlot: TimeSlot) {
+    this._timeSlots.splice(this._timeSlots.indexOf(timeSlot), 1);
   }
 
-  addSlot(timeSlot: TimeSlot) {
+  addTimeSlot(timeSlot: TimeSlot) {
     this._timeSlots.push(timeSlot);
   }
 

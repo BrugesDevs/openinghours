@@ -37,6 +37,9 @@
           <ion-datetime displayFormat="HH mm" placeholder="Sluitingsuur"
                         [(ngModel)]="timeslot.closingHour"></ion-datetime>
         </ion-col>
+        <ion-col>
+          <button ion-button clear (click)="day.deleteTimeSlot(timeslot)"><ion-icon name="close-circle"></ion-icon></button>
+        </ion-col>
       </ion-row>
 
       <ion-row align-items-center>
