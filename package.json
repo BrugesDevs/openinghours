@@ -1,6 +1,6 @@
 {
   "name": "openinghours",
-  "version": "0.0.1",
+  "version": "0.0.0-1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
   "private": true,
@@ -8,7 +8,12 @@
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "lint": "ionic-app-scripts lint",
+    "publish": "npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrugesDevs/openinghours.git"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
