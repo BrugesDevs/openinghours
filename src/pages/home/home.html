@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card padding *ngFor="let day of days">
+  <ion-card padding *ngFor="let day of facade.days">
     <ion-card-header>
       <ion-item (click)="day.toggleOpen()">
           {{day.dayName | titlecase}}

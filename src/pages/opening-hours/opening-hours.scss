@@ -1,0 +1,10 @@
+page-opening-hours {
+
+  @media screen and (min-width: 300px) {
+    .day-name{
+      min-width: 100px;
+      width: 30%;
+    }
+  }
+  @media screen and (min-width: 1000px) {}
+}

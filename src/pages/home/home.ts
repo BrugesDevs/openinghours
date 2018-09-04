@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {DayModel} from "../../core/model/day.model";
+import {OpeningHoursFacade} from "../facade/opening-hours.facade";
 
 @Component({
   selector: 'page-home',
@@ -8,17 +9,12 @@ import {DayModel} from "../../core/model/day.model";
 })
 export class HomePage {
 
-  days: DayModel[] = [];
-
-  constructor(public navCtrl: NavController) {
-    const dayAbbreviations = ['maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag', 'zondag'];
-    for (let i = 0; i < dayAbbreviations.length; i++) {
-      this.days.push(new DayModel(dayAbbreviations[i]));
-    }
+  constructor(public navCtrl: NavController,
+              private facade: OpeningHoursFacade) {
   }
 
   addHourSlot(day: DayModel) {
-    day.createTimeSlot();
+    this.facade.addHourSlot(day);
   }
 
   displayIcon(day: DayModel) {
