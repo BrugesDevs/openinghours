@@ -55,7 +55,7 @@ export class DayModel {
     for (let i = 0; i < this._timeSlots.length; i++) {
       hours += this._timeSlots[i].getFormattedHours();
       if (i != this.timeSlots.length - 1) {
-        hours += "   ";
+        hours += "\xa0\xa0\xa0\xa0";
       }
     }
     return hours;
