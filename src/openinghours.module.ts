@@ -1,7 +1,7 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
-import {OpeningHoursPage} from "../dist/pages/opening-hours/opening-hours";
 import {OpeningHoursManagementPage} from "./pages/opening-hours-management/opening-hours-management";
 import {OpeningHoursFacade} from "./pages/facade/opening-hours.facade";
+import {OpeningHoursPage} from "./pages/opening-hours/opening-hours";
 
 @NgModule({
   imports: [
