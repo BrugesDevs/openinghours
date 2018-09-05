@@ -14,10 +14,12 @@
 
 
 <ion-content padding>
-<ion-list *ngFor="let day of facade.days">
-  <ion-item>
-    <ion-label class="day-name">{{day.dayName}}</ion-label>
-    <ion-label text-wrap>{{day.getFormattedHours()}}</ion-label>
-  </ion-item>
-</ion-list>
+  <ion-row *ngFor="let day of facade.days" style="border-bottom: lightgray 1px solid" >
+    <ion-label style="width: 50px;">{{day.dayName}}</ion-label>
+    <ion-col>
+      <ion-row *ngFor="let timeSlot of day.timeSlots">
+        <ion-label text-right>{{timeSlot.getFormattedHours()}}</ion-label>
+      </ion-row>
+    </ion-col>
+  </ion-row>
 </ion-content>

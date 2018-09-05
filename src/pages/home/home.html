@@ -8,22 +8,19 @@
 
 <ion-content padding>
   <ion-card padding *ngFor="let day of facade.days">
-    <ion-card-header>
-      <ion-item (click)="day.toggleOpen()">
-          {{day.dayName | titlecase}}
+    <ion-row align-items-center (click)="day.toggleOpen()">
+        <ion-label style="width: 100px;">{{day.dayName | titlecase}}</ion-label>
         <ion-list float-right>
-          <ng-container *ngFor="let slot of day.timeSlots">
-            <ion-item *ngIf="slot.hasFormattedHours()">
-              <ion-label no-margin>
-                {{slot.getFormattedHours()}}
-              </ion-label>
-            </ion-item>
-          </ng-container>
+          <ion-item *ngFor="let slot of day.timeSlots">
+            <ion-label no-margin no-padding>
+              {{slot.getFormattedHours()}}
+            </ion-label>
+          </ion-item>
         </ion-list>
-        <ion-icon [name]="displayIcon(day)" color="favorite" item-right
-                  style="margin-left: 8px;"></ion-icon>
-      </ion-item>
-    </ion-card-header>
+      <ion-icon [name]="displayIcon(day)" color="favorite" item-right
+                float-right
+                style="margin-left: 8px;"></ion-icon>
+    </ion-row>
     <ion-card-content *ngIf="day.open">
       <ion-row style="max-width: 300px;" *ngFor="let timeslot of day.timeSlots">
         <ion-col>
@@ -38,7 +35,9 @@
                         [(ngModel)]="timeslot.closingHour"></ion-datetime>
         </ion-col>
         <ion-col>
-          <button ion-button clear (click)="day.deleteTimeSlot(timeslot)"><ion-icon name="close-circle"></ion-icon></button>
+          <button ion-button clear (click)="day.deleteTimeSlot(timeslot)">
+            <ion-icon name="close-circle"></ion-icon>
+          </button>
         </ion-col>
       </ion-row>
 
