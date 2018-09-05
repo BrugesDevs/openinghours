@@ -1,13 +1,15 @@
 {
   "name": "openinghours-crm",
-  "version": "0.0.0-2",
+  "version": "0.0.1-0",
   "author": "Robin Bruneel",
-  "description": "A component that makes it possible to enter opening and closing hours of a company or shop",
+  "description": "An Ionic project",
   "homepage": "https://github.com/BrugesDevs/openinghours",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "license": "MIT",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "private": false,
   "scripts": {
     "ngc": "ngc",
@@ -44,6 +46,5 @@
   "devDependencies": {
     "@ionic/app-scripts": "3.2.0",
     "typescript": "~2.6.2"
-  },
-  "description": "An Ionic project"
+  }
 }
