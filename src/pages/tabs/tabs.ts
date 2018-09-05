@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {HomePage} from "../home/home";
+import {OpeningHoursManagementPage} from "../opening-hours-management/opening-hours-management";
 import {OpeningHoursPage} from "../opening-hours/opening-hours";
 
 @Component({
@@ -7,7 +7,7 @@ import {OpeningHoursPage} from "../opening-hours/opening-hours";
 })
 export class TabsPage {
 
-  tab1Root = HomePage;
+  tab1Root = OpeningHoursManagementPage;
   tab2Root = OpeningHoursPage;
 
   constructor() {

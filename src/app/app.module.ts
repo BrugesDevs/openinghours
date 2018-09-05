@@ -5,7 +5,7 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {StatusBar} from '@ionic-native/status-bar';
 
 import {MyApp} from './app.component';
-import {HomePage} from '../pages/home/home';
+import {OpeningHoursManagementPage} from '../pages/opening-hours-management/opening-hours-management';
 import {TabsPage} from "../pages/tabs/tabs";
 import {OpeningHoursFacade} from "../pages/facade/opening-hours.facade";
 import {OpeningHoursPage} from "../pages/opening-hours/opening-hours";
@@ -13,7 +13,7 @@ import {OpeningHoursPage} from "../pages/opening-hours/opening-hours";
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    OpeningHoursManagementPage,
     TabsPage,
     OpeningHoursPage
   ],
@@ -24,7 +24,7 @@ import {OpeningHoursPage} from "../pages/opening-hours/opening-hours";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    OpeningHoursManagementPage,
     TabsPage,
     OpeningHoursPage
   ],

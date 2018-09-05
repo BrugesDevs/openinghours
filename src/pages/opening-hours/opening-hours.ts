@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {OpeningHoursFacade} from "../facade/opening-hours.facade";
 
 /**
@@ -15,14 +15,5 @@ import {OpeningHoursFacade} from "../facade/opening-hours.facade";
   templateUrl: 'opening-hours.html',
 })
 export class OpeningHoursPage {
-
-  constructor(public navCtrl: NavController,
-              public navParams: NavParams,
-              private facade: OpeningHoursFacade) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad OpeningHoursPage');
-  }
 
 }

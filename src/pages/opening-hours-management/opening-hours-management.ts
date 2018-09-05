@@ -4,10 +4,10 @@ import {DayModel} from "../../core/model/day.model";
 import {OpeningHoursFacade} from "../facade/opening-hours.facade";
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-opening-hours-management',
+  templateUrl: 'opening-hours-management.html'
 })
-export class HomePage {
+export class OpeningHoursManagementPage {
 
   constructor(public navCtrl: NavController,
               private facade: OpeningHoursFacade) {
