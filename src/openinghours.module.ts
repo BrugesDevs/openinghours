@@ -2,9 +2,11 @@ import {ModuleWithProviders, NgModule} from '@angular/core';
 import {OpeningHoursManagementPage} from "./pages/opening-hours-management/opening-hours-management";
 import {OpeningHoursFacade} from "./pages/facade/opening-hours.facade";
 import {OpeningHoursPage} from "./pages/opening-hours/opening-hours";
+import {IonicModule} from "ionic-angular";
 
 @NgModule({
   imports: [
+    IonicModule
   ],
   declarations: [
     // declare all components that your module uses
