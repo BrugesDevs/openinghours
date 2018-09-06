@@ -5,7 +5,7 @@ import {OpeningHoursFacade} from "../facade/opening-hours.facade";
 
 @Component({
   selector: 'page-opening-hours-management',
-  templateUrl: 'opening-hours-management.html'
+  templateUrl: './opening-hours-management.html'
 })
 export class OpeningHoursManagementPage {
 

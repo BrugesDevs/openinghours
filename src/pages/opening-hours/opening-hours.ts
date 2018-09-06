@@ -12,7 +12,7 @@ import {OpeningHoursFacade} from "../facade/opening-hours.facade";
 @IonicPage()
 @Component({
   selector: 'page-opening-hours',
-  templateUrl: 'opening-hours.html',
+  templateUrl: './opening-hours.html',
 })
 export class OpeningHoursPage {
 
