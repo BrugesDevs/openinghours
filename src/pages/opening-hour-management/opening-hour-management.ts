@@ -5,9 +5,9 @@ import {OpeningHoursFacade} from "../facade/opening-hours.facade";
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'opening-hour-management.html'
 })
-export class HomePage {
+export class OpeningHourManagementPage {
 
   constructor(public navCtrl: NavController,
               private facade: OpeningHoursFacade) {

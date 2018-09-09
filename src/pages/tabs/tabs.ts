@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {HomePage} from "../home/home";
+import {HomePage} from "../opening-hour-management/opening-hour-management";
 import {OpeningHoursPage} from "../opening-hours/opening-hours";
 
 @Component({

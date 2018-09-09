@@ -24,14 +24,14 @@
     <ion-card-content *ngIf="day.open">
       <ion-row style="max-width: 300px;" *ngFor="let timeslot of day.timeSlots">
         <ion-col>
-          <ion-datetime displayFormat="HH mm" placeholder="Openingsuur"
+          <ion-datetime displayFormat="HH:mm" placeholder="Openingsuur"
                         [(ngModel)]="timeslot.openingsHour"></ion-datetime>
         </ion-col>
         <ion-col>
           <p style="text-align: center;">-</p>
         </ion-col>
         <ion-col>
-          <ion-datetime displayFormat="HH mm" placeholder="Sluitingsuur"
+          <ion-datetime displayFormat="HH:mm" placeholder="Sluitingsuur"
                         [(ngModel)]="timeslot.closingHour"></ion-datetime>
         </ion-col>
         <ion-col>
